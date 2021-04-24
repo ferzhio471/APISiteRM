@@ -1,0 +1,22 @@
+<div class="card">
+
+    <!--Componente principal de la tarjeta -->
+    <div class="image">
+        <a [routerLink]="['/character-details', character.id]">
+            <img [src]="character.image" [alt]="character.name" class="card-img-top" />
+        </a>
+    </div>
+
+    <!--Informacion que se desplega-->
+    <div class="card-inner">
+        <div class="header">
+            <a [routerLink]="['/character-details', character.id]">
+                <h2>{{ character.name | slice: 0:15}}</h2>
+            </a>
+            <h4 class="text-muted">{{ "- "+ character.gender }}</h4>
+            <h4 class="text-muted">{{ "- "+ character.species }}</h4>
+            <h4 class="text-muted">{{ "- "+ character.status }}</h4>
+        </div>
+        
+    </div>
+</div>
